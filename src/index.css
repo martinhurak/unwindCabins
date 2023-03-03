@@ -1,13 +1,486 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* header*/
+.header-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background-color: #ffff;
 }
+
+.nav--logo {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.logo--unwind {
+  color: #166527;
+}
+
+.logo--cabins {
+  color: #1A3724;
+}
+
+.nav--defaultInfo {
+  display: flex;
+  gap: 32px;
+  font-weight: 400;
+}
+
+/*body*/
+
+/*body--hero*/
+.hero--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero--section-left {
+  background: #2E2E35;
+  height: 500px;
+  flex-basis: 40%;
+}
+
+.hero--section-right {
+  background: url(./travel_website/img/hero-selection.avif) no-repeat 0px;
+  height: 500px;
+  flex-basis: 60%;
+  background-size: cover;
+}
+
+.hero--section-cover {
+  background: linear-gradient(to right, #18181b, rgba(0, 0, 0, 0));
+  height: 500px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero--section-article {
+  color: #ffff;
+  max-width: 544px;
+  padding-left: 23%;
+  padding-top: 96px;
+}
+
+.hero--section-header {
+
+  font-size: 44px;
+  line-height: 56px;
+  font-family: 'Source Serif Pro', serif;
+}
+
+.hero--section-header>span:last-of-type {
+  color: #F5B963;
+}
+
+.hero--section-article>p {
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.hero-section-rewiew {
+  display: flex;
+  align-items: center;
+}
+
+.hero--section-imgContainer>img {
+  outline: solid rgb(0, 0, 0) 1px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.hero--section-imgContainer>img:first-of-type {
+  right: 0px;
+}
+
+.hero--section-imgContainer>img:nth-of-type(2) {
+  right: 5px;
+}
+
+.hero--section-imgContainer>img:nth-of-type(3) {
+  right: 10px;
+}
+
+.hero--section-imgContainer>img:nth-of-type(4) {
+  right: 15px;
+}
+
+.hero--section-imgContainer>img:nth-of-type(5) {
+  right: 20px;
+}
+
+.trustPilot-container {
+  display: flex;
+  align-items: center;
+  color: #ffff;
+  
+}
+
+.trustPilot-container>div:first-child {
+  padding-right: 14px;
+
+}
+
+.trustPilot-container>div:first-child>svg {
+  color: #1BB580;
+}
+
+.trustPilot-container>div:last-child>svg {
+  background-color: #1BB580;
+  margin-right: 1px;
+  width: 15px;
+  padding: 2px;
+}
+
+.trustPilot-container>div:last-child>span {
+  padding-left: 12px;
+  font-weight: 200;
+}
+
+/*Search bar */
+.searchBar--container {
+
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  max-width: 100%;
+  min-width: 70%;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 100px;
+  padding: 0px 27px;
+  box-shadow: 1px 0px 42px 9px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 1px 0px 42px 9px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 1px 0px 42px 9px rgba(0, 0, 0, 1);
+  border-radius: 5px;
+}
+
+.searchBar--container>.travelersHolder>input,
+.searchBar--container>.inputHolder>input,
+.searchBar--container>.dateHolder>input ,
+.searchButton{
+  background-color: #EAEAEA;
+  margin-right: 8px;
+  line-height: 40px;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: 10% center;
+
+}
+
+.inputHolder {
+  position: relative;
+  width: 25%;
+}
+
+.searchBar--container>.inputHolder>input,
+.searchBar--container>.dateHolder>input,
+.searchBar--container>.travelersHolder>input {
+  padding-left: 20%;
+}
+
+
+.search-input {
+  background-image: url(./travel_website/img/icons/map.png);
+  width: 75%;
+
+}
+
+.datepicker {
+  background-image: url(./travel_website/img/icons/calendar.png);
+  width: 75%;
+}
+
+.set-people-input {
+  background-image: url(./travel_website/img/icons/people.png);
+  width: 75%;
+}
+
+.searchButton{
+  background-color: #233D2C;
+  color: #ffff;
+  flex-grow: 1;
+
+  padding: 0px 40px;
+}
+
+.locations-active {
+
+  color: #18181b;
+  background-color: #EAEAEA;
+  min-width: 20%;
+  border: solid 1px black;
+  position:absolute;
+  z-index: 1;
+
+  top: 70px;
+  border-radius: 2px;
+  box-shadow: -3px 20px 51px -7px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: -3px 20px 51px -7px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: -3px 20px 51px -7px rgba(0, 0, 0, 0.9);
+
+
+}
+
+.locations-active>li {
+  line-height: 30px;
+  padding-left: 15%;
+  margin-left: 0px;
+  list-style: none;
+}
+
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.locations-active>li:hover {
+  background-color: #a7a6a6;
+  cursor: pointer;
+
+}
+
+.clearButton {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  width: 20px;
+  height: 20px;
+  background-image: url(./travel_website/img/icons/cross.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+
+.dateHolder {
+  position: relative;
+  flex-grow: 1;
+
+}
+
+.dateHolder {
+  width: 25%;
+}
+
+.react-calendar {
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  min-width: 400px;
+  left: 0px;
+  z-index: 1;
+ 
+}
+
+/*travelers-options*/
+.travelersHolder {
+  position: relative;
+  flex-grow: 2;
+}
+
+.travelersOptions-active {
+  
+  color: #18181b;
+  min-width: 250px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: solid black 1px;
+  box-shadow: 1px 0px 71px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 35px 71px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 35px 71px 4px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  
+}
+
+.travelersOptions-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #EAEAEA;
+  padding: 0px 5%;
+
+
+
+
+}
+
+.travelersOptions-container>span,
+.travelersOptions-container>div>span:first-of-type{
+  font-weight: 600;
+}
+
+
+
+
+.numberOfguest-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.numberOfguest-container >span{
+  text-align: center;
+  width: 20px;
+  padding:0px 10% ;
+}
+
+.children-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.children-age {
+  color: gray;
+  font-size: 12px;
+  display: inline-block
+}
+
+.numberOfguest-container>button {
+  border: solid #233D2C 1px;
+  color:#233D2C ;
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.numberOfguest-container>button:focus {
+  box-shadow: 0px 1px 3px 2px rgba(35,61,44,1);
+  -webkit-box-shadow: 0px 1px 3px 2px rgba(35,61,44,1);
+  -moz-box-shadow: 0px 1px 3px 2px rgba(35,61,44,1);
+}
+
+@media only screen and (max-width: 900px){
+.header-nav{
+  justify-content: space-between;
+  padding: 0px 5%;
+  height: 70px;
+}
+.nav--logo{
+  font-size: 20px;
+}
+
+.hero--section-left,
+.hero--section-right,
+.hero--section-cover{
+  height: 400px;
+}
+.hero--section-article{
+
+  padding: 10% 15%;
+}
+
+.hero--section-header{
+  font-size: 26px;
+  line-height: 32px;
+}
+
+  .searchBar--container{
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    min-width: 80%;
+
+    gap: 5px;
+padding-top: 40px;
+padding-bottom: 20px;
+  }
+  .searchBar--container>div
+ {
+    width: 100%;
+    
+  }
+  .searchBar--container>div>input{
+    max-width: 100%;
+    min-width: 80%;
+    padding-left: 15%;
+    
+  }
+ 
+
+
+  .locations-active {
+    top: 82px;
+    left: 27px;
+    width: 80%;
+  }
+  .react-calendar{
+    top: 100%;
+    min-width: 0px;
+  }
+  .nav--defaultInfo{
+    display: none;
+  }
+
+ 
+}
+
+/* burger menu */ 
+@media only screen and (min-width: 900px){
+  .hamburger-react{display: none; }
+}
+
+
+
+@media only screen and (max-width: 700px){
+
+  .hero--section-imgContainer{
+    display: none;
+  }
+  .trustPilot-container >div:first-of-type{
+    display: none;
+  }
+  .hero--section-article>p{
+    line-height: 22px;
+  }
+
+  .hero--section-left {
+    flex-basis: 0%;
+    height: 300px;
+  }
+  .hero--section-right{
+    flex-basis: 100%;
+    height: 300px;
+  }
+  .hero--section-cover{
+    left: 0px;
+    height: 300px;
+  }
+  .nav--defaultInfo{
+    display: none;
+  }
+  .hero--section-fullDescribe{
+    display: none;
+  }
+
+  .searchBar--container {
+    bottom: 30px;
+  }
+
+  .searchBar--container>.travelersHolder>input, .searchBar--container>.inputHolder>input, .searchBar--container>.dateHolder>input, .searchButton{
+    font-size: 12px;
+  }
+
+}
+@media only screen and (min-width: 700px){
+  .hero--section-mobileDescribe{display: none; }
+}
+
+
+
